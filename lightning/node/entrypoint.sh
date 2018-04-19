@@ -1,10 +1,10 @@
 #!/bin/bash
 
-mkdir -p $HOME/.bitcoin/testnet3 || true
+mkdir -p $HOME/.monacoin/ || true
 
-echo "Starting bitcoind"
-bitcoind -testnet -daemon
-echo "Waiting for bitcoind to startup"
+echo "Starting monacoind"
+monacoind -daemon
+echo "Waiting for monacoind to startup"
 sleep 5
 echo "Starting lightningd"
 /usr/bin/lightningd $@
