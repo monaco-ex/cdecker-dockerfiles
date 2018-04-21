@@ -36,3 +36,5 @@ ADD entrypoint.sh /
 
 ENTRYPOINT /entrypoint.sh
 CMD ['--port=9735' '--network=monacoin' '--log-level=debug']
+
+VOLUME /root
