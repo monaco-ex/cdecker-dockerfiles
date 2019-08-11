@@ -1,7 +1,7 @@
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 
 RUN apt-get update -qq && apt-get install -qq -y dirmngr
-RUN echo deb http://ppa.launchpad.net/visvirial/monacoin/ubuntu artful main > /etc/apt/sources.list.d/visvirial-monacoin-artful.list && \
+RUN echo deb http://ppa.launchpad.net/visvirial/monacoin/ubuntu bionic main > /etc/apt/sources.list.d/visvirial-monacoin-artful.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 46F1E621FFD374E3 && \
     apt-get update -qq && \
     apt-get install -qq -y --no-install-recommends --allow-unauthenticated \
@@ -16,7 +16,7 @@ RUN echo deb http://ppa.launchpad.net/visvirial/monacoin/ubuntu artful main > /e
 	    libprotobuf-c-dev \
 	    libsodium-dev \
 	    libsqlite3-dev \
-            zlib1g-dev \
+	    zlib1g-dev \
 	    libtool \
 	    make \
 	    net-tools \
